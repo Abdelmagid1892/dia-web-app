@@ -5,25 +5,25 @@ import LemmaData from '../LemmaData';
 function ElencoFunzioni() {
   const functions = {};
   
-  Object.entries(LemmaData).forEach(([lemma, data]) => {
-    data.funzioni.forEach(funzione => {
-      if (!functions[funzione.titolo]) {
-        functions[funzione.titolo] = [];
+  Object.values(LemmaData).forEach(lemma => {
+    lemma.funzioni.forEach(funzione => {
+      if (!functions[funzione.macroFunzione]) {
+        functions[funzione.macroFunzione] = new Set();
       }
-      functions[funzione.titolo].push(lemma);
+      functions[funzione.macroFunzione].add(funzione.funzione);
     });
   });
 
   return (
     <div className="elenco-funzioni">
-      <h2>Elenco Funzioni</h2>
-      {Object.entries(functions).map(([funzione, lemmi]) => (
-        <div key={funzione}>
-          <h3>{funzione}</h3>
+      <h2>Elenco Funzioni Comunicative</h2>
+      {Object.entries(functions).map(([macroFunzione, funzioni]) => (
+        <div key={macroFunzione}>
+          <h3>{macroFunzione}</h3>
           <ul>
-            {lemmi.map(lemma => (
-              <li key={lemma}>
-                <Link to={`/lemma/${lemma}`}>{lemma}</Link>
+            {Array.from(funzioni).map(funzione => (
+              <li key={funzione}>
+                <Link to={`/funzione/${encodeURIComponent(funzione)}`}>{funzione}</Link>
               </li>
             ))}
           </ul>

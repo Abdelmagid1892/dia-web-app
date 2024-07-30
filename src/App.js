@@ -28,6 +28,7 @@ function App() {
             <Route path="/lemmario-alfabetico" element={<LemmarioAlfabetico />} />
             <Route path="/elenco-funzioni" element={<ElencoFunzioni />} />
             <Route path="/lemmario-per-funzione" element={<LemmarioPerFunzione />} />
+            <Route path="/funzione/:funzione" element={<LemmarioPerFunzione />} />
           </Routes>
         </main>
       </div>
