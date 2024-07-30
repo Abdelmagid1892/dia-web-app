@@ -1,0 +1,28 @@
+.lemma-display {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.lemma-display h2 {
+  color: #282c34;
+  border-bottom: 2px solid #61dafb;
+  padding-bottom: 10px;
+}
+
+.funzione {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.expandable {
+  cursor: pointer;
+  user-select: none;
+  color: #21a1c9;
+}
+
+.expandable:hover {
+  text-decoration: underline;
+}

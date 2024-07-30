@@ -1,64 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import SearchBar from './components/SearchBar';
 import LemmaDisplay from './components/LemmaDisplay';
-import AlphabeticalList from './components/AlphabeticalList';
-import FunctionsList from './components/FunctionsList';
-import FunctionaryList from './components/FunctionaryList';
+import LemmarioAlfabetico from './components/LemmarioAlfabetico';
+import ElencoFunzioni from './components/ElencoFunzioni';
+import LemmarioPerFunzione from './components/LemmarioPerFunzione';
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [currentLemma, setCurrentLemma] = useState(null);
-  const [view, setView] = useState('home'); // new state to manage views
-
-  const handleSearch = () => {
-    // Dummy data for now. Replace with actual search logic.
-    setCurrentLemma({
-      word: searchTerm,
-      functions: [
-        {
-          definition: 'Introduce un nuovo tema o sottotema del discorso (ORGANIZZARE IL TESTO > INDICARE DISCONTINUITÀ TEMATICA)',
-          construction: 'Locuzione preposizionale seguita da un nome',
-          examples: ['Per quanto riguarda la distribuzione...'],
-          alternatives: ['dal punto di vista', 'in relazione a'],
-        }
-      ]
-    });
-  };
-
-  const renderView = () => {
-    switch(view) {
-      case 'alphabetical':
-        return <AlphabeticalList />;
-      case 'functions':
-        return <FunctionsList />;
-      case 'functionary':
-        return <FunctionaryList />;
-      default:
-        return (
-          <>
-            <SearchBar setSearchTerm={setSearchTerm} />
-            {currentLemma && <LemmaDisplay lemma={currentLemma} />}
-          </>
-        );
-    }
-  };
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Dizionario Accademico Italiano</h1>
-        <nav>
-          <button onClick={() => setView('alphabetical')}>[A] Lemmario Alfabetico</button>
-          <button onClick={() => setView('functions')}>[F] Elenco Funzioni</button>
-          <button onClick={() => setView('functionary')}>[L] Lemmario per Funzione</button>
-          <button onClick={() => setView('home')}>Home</button>
-        </nav>
-      </header>
-      <main>
-        {renderView()}
-      </main>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1>Dizionario Accademico Italiano</h1>
+          <nav>
+            <Link to="/">Home</Link>
+            <Link to="/lemmario-alfabetico">[A] Lemmario Alfabetico</Link>
+            <Link to="/elenco-funzioni">[F] Elenco Funzioni</Link>
+            <Link to="/lemmario-per-funzione">[L] Lemmario per Funzione</Link>
+          </nav>
+          <SearchBar />
+        </header>
+        <main>
+          <Routes>
+            <Route path="/" element={<LemmaDisplay />} />
+            <Route path="/lemma/:lemma" element={<LemmaDisplay />} />
+            <Route path="/lemmario-alfabetico" element={<LemmarioAlfabetico />} />
+            <Route path="/elenco-funzioni" element={<ElencoFunzioni />} />
+            <Route path="/lemmario-per-funzione" element={<LemmarioPerFunzione />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
