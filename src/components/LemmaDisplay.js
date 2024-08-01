@@ -25,7 +25,6 @@ function LemmaDisplay() {
       <h2>{lemmaData.lemma}</h2>
       {lemmaData.funzioni.map((funzione, index) => (
         <div key={index} className="funzione-section">
-          <h3>{funzione.macroFunzione} > {funzione.funzione}</h3>
           <p><strong>Definizione funzione:</strong> {funzione.definizioneFunzione}</p>
           <p><strong>Costruzione:</strong> {funzione.costruzione}</p>
           
