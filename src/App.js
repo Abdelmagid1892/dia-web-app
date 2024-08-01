@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="App-header">
-          <h1>Dizionario Accademico Italiano</h1>
+          <h1>Dizionario Italiano Accademico</h1>
           <nav>
             <Link to="/">Home</Link>
             <Link to="/lemmario-alfabetico">[A] Lemmario Alfabetico</Link>

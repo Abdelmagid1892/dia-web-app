@@ -5,11 +5,15 @@ const LemmaData = {
       {
         macroFunzione: "ORGANIZZARE IL TESTO",
         funzione: "INDICARE DISCONTINUITÀ TEMATICA",
-        definizione: "Introduce un nuovo tema o sottotema del discorso",
-        costruzione: "Locuzione preposizionale seguita da un nome (es. per quanto riguarda la distribuzione) generalmente usata a inizio frase",
-        esempi: ["Secondo la descrizione offerta in questo testo, l'ideale forma urbis di una capitale doveva avere pianta quadrata cardinalmente orientata, con un perimetro di 9 li (4,5 km ca.): su ciascuno dei lati della cinta dovevano aprirsi tre ingressi monumentali, mentre l'impianto viario, con struttura a griglia, doveva essere costituito da nove strade con andamento nordsud e nove in direzione est-ovest. Per quanto riguarda la distribuzione degli spazi e delle funzioni, sulla sinistra (ovest) doveva trovarsi il tempio ancestrale e sulla destra (est) l'altare per offrire sacrifici agli dei del suolo e della pioggia."],
+        definizioneFunzione: "Introduce un nuovo tema o sottotema del discorso",
+        costruzione: "Locuzione preposizionale seguita da un nome generalmente usata a inizio frase",
+        esempi: [
+          "Secondo la descrizione offerta in questo testo, l'ideale forma urbis di una capitale doveva avere pianta quadrata cardinalmente orientata, con un perimetro di 9 li (4,5 km ca.): su ciascuno dei lati della cinta dovevano aprirsi tre ingressi monumentali, mentre l'impianto viario, con struttura a griglia, doveva essere costituito da nove strade con andamento nordsud e nove in direzione est-ovest. Per quanto riguarda la distribuzione degli spazi e delle funzioni, sulla sinistra (ovest) doveva trovarsi il tempio ancestrale e sulla destra (est) l'altare per offrire sacrifici agli dei del suolo e della pioggia."
+        ],
         espressioniAlternative: ["dal punto di vista", "in relazione a"],
-        sequenzeTestuali: ["La nomina dei membri (e dei sostituti) dello IAB deve tener conto di due criteri fondamentali: la competenza e l'indipendenza. In particolare, in merito al primo profilo, il Mandato reca le condizioni per la nomina dei membri, stabilendo che i candidati devono essere alti funzionari delle Direzioni Generali rappresentate nello IAB e […] Per quanto riguarda il secondo profilo, i membri dello IAB agiscono in piena indipendenza nell'interesse dell'istituzione."],
+        sequenzeTestuali: [
+          "La nomina dei membri (e dei sostituti) dello IAB deve tener conto di due criteri fondamentali: la competenza e l'indipendenza. In particolare, in merito al primo profilo, il Mandato reca le condizioni per la nomina dei membri, stabilendo che i candidati devono essere alti funzionari delle Direzioni Generali rappresentate nello IAB e […] Per quanto riguarda il secondo profilo, i membri dello IAB agiscono in piena indipendenza nell'interesse dell'istituzione."
+        ],
         particolaritaMorfosintattiche: "Il verbo all'interno della locuzione è generalmente fisso alla terza persona dell'indicativo presente (riguarda), ma talvolta può essere flesso in altri tempi",
         suggerimentiUso: "Utilizzare per introdurre un nuovo argomento o aspetto in un discorso o testo"
       }
@@ -22,7 +26,7 @@ const LemmaData = {
       {
         macroFunzione: "ORGANIZZARE IL TESTO",
         funzione: "INDICARE PROSPETTIVA",
-        definizione: "Introduce una specifica prospettiva o angolazione da cui considerare un argomento",
+        definizioneFunzione: "Introduce una specifica prospettiva o angolazione da cui considerare un argomento",
         costruzione: "Locuzione preposizionale seguita da un aggettivo o un complemento di specificazione",
         esempi: ["Dal punto di vista economico, questa decisione avrà conseguenze significative."],
         espressioniAlternative: ["secondo", "nell'ottica di"],
@@ -39,7 +43,7 @@ const LemmaData = {
       {
         macroFunzione: "ARGOMENTARE",
         funzione: "INTRODURRE UN'OSSERVAZIONE",
-        definizione: "Introduce un'osservazione o un commento su un determinato argomento",
+        definizioneFunzione: "Introduce un'osservazione o un commento su un determinato argomento",
         costruzione: "Verbo seguito da una frase completiva o un complemento oggetto",
         esempi: ["Osservo che le conclusioni sembrano affrettate.", "È importante osservare il comportamento degli utenti prima di trarre conclusioni."],
         espressioniAlternative: ["notare", "rilevare"],
@@ -56,7 +60,7 @@ const LemmaData = {
       {
         macroFunzione: "ORGANIZZARE IL TESTO",
         funzione: "INDICARE CONNESSIONE",
-        definizione: "Stabilisce una connessione o relazione tra due elementi del discorso",
+        definizioneFunzione: "Stabilisce una connessione o relazione tra due elementi del discorso",
         costruzione: "Locuzione preposizionale seguita da un nome o una frase",
         esempi: ["In relazione a quanto detto precedentemente, vorrei aggiungere alcune considerazioni."],
         espressioniAlternative: ["in riferimento a", "riguardo a"],
@@ -73,7 +77,7 @@ const LemmaData = {
       {
         macroFunzione: "ORGANIZZARE IL TESTO",
         funzione: "INDICARE DISCONTINUITÀ TEMATICA",
-        definizione: "Introduce un nuovo aspetto o tema del discorso",
+        definizioneFunzione: "Introduce un nuovo aspetto o tema del discorso",
         costruzione: "Locuzione preposizionale seguita da un nome o una frase",
         esempi: ["Per quanto concerne la questione finanziaria, abbiamo preparato un rapporto dettagliato."],
         espressioniAlternative: ["per ciò che riguarda", "in merito a"],
@@ -90,7 +94,7 @@ const LemmaData = {
       {
         macroFunzione: "ORGANIZZARE IL TESTO",
         funzione: "SPECIFICARE AMBITO",
-        definizione: "Specifica l'ambito o l'area di competenza di un argomento",
+        definizioneFunzione: "Specifica l'ambito o l'area di competenza di un argomento",
         costruzione: "Locuzione preposizionale seguita da 'di' e un nome",
         esempi: ["Le nuove normative in materia di protezione dei dati personali sono entrate in vigore."],
         espressioniAlternative: ["nel campo di", "nell'ambito di"],
@@ -107,7 +111,7 @@ const LemmaData = {
       {
         macroFunzione: "ORGANIZZARE IL TESTO",
         funzione: "INDICARE RIFERIMENTO",
-        definizione: "Introduce un riferimento specifico a un argomento o una questione",
+        definizioneFunzione: "Introduce un riferimento specifico a un argomento o una questione",
         costruzione: "Locuzione preposizionale seguita da un nome o una frase",
         esempi: ["In merito alla sua richiesta, possiamo fornire le seguenti informazioni."],
         espressioniAlternative: ["riguardo a", "a proposito di"],
@@ -124,7 +128,7 @@ const LemmaData = {
       {
         macroFunzione: "ORGANIZZARE IL TESTO",
         funzione: "INDICARE RIFERIMENTO",
-        definizione: "Stabilisce una relazione o un riferimento a un argomento specifico",
+        definizioneFunzione: "Stabilisce una relazione o un riferimento a un argomento specifico",
         costruzione: "Locuzione preposizionale seguita da un nome o una frase",
         esempi: ["Relativamente alla questione ambientale, sono state proposte diverse soluzioni."],
         espressioniAlternative: ["per quanto riguarda", "in relazione a"],
@@ -141,7 +145,7 @@ const LemmaData = {
       {
         macroFunzione: "ARGOMENTARE",
         funzione: "RICHIAMARE L'ATTENZIONE",
-        definizione: "Richiama l'attenzione su un punto particolare o introduce un'osservazione",
+        definizioneFunzione: "Richiama l'attenzione su un punto particolare o introduce un'osservazione",
         costruzione: "Verbo seguito da una frase completiva o un complemento oggetto",
         esempi: ["È importante notare che questi risultati sono preliminari.", "Notate come il grafico mostra un andamento crescente."],
         espressioniAlternative: ["osservare", "rilevare"],
@@ -158,7 +162,7 @@ const LemmaData = {
       {
         macroFunzione: "ARGOMENTARE",
         funzione: "INTRODURRE UN'OSSERVAZIONE IMPORTANTE",
-        definizione: "Introduce un'osservazione o un punto rilevante nel discorso",
+        definizioneFunzione: "Introduce un'osservazione o un punto rilevante nel discorso",
         costruzione: "Verbo seguito dalla congiunzione 'che' e una frase",
         esempi: ["È da notare che questi risultati sono coerenti con studi precedenti.", "Notare che l'effetto si manifesta solo in determinate condizioni."],
         espressioniAlternative: ["si noti che", "va notato che"],

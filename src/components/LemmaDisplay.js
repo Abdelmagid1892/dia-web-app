@@ -24,10 +24,10 @@ function LemmaDisplay() {
     <div className="lemma-display">
       <h2>{lemmaData.lemma}</h2>
       {lemmaData.funzioni.map((funzione, index) => (
-        <div key={index} className="funzione">
-          <h3>{funzione.titolo}</h3>
+        <div key={index} className="funzione-section">
+          <h3>{funzione.macroFunzione} > {funzione.funzione}</h3>
+          <p><strong>Definizione funzione:</strong> {funzione.definizioneFunzione}</p>
           <p><strong>Costruzione:</strong> {funzione.costruzione}</p>
-          <p><strong>Definizione:</strong> {funzione.definizione}</p>
           
           <h4 onClick={() => toggleSection(`esempi-${index}`)} className="expandable">
             Esempi {expandedSections[`esempi-${index}`] ? '▼' : '▶'}
@@ -46,7 +46,9 @@ function LemmaDisplay() {
           {expandedSections[`alternative-${index}`] && (
             <ul>
               {funzione.espressioniAlternative.map((alt, i) => (
-                <li key={i}><Link to={`/lemma/${alt}`}>{alt}</Link></li>
+                <li key={i}>
+                  <Link to={`/lemma/${encodeURIComponent(alt)}`}>{alt}</Link>
+                </li>
               ))}
             </ul>
           )}
